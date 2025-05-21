@@ -40,8 +40,8 @@ interface WorkflowStep {
 const AnimatedText = () => {
     const phrases = ["Quant Systematic", "AI-Powered", "Data-Driven", "No-Code"];
     const [currentPhrase, setCurrentPhrase] = useState(0);
-    const [_isAnimating, setIsAnimating] = useState(false);
-
+    const [isAnimating, setIsAnimating] = useState(false);
+    console.log(isAnimating);
     useEffect(() => {
         const interval = setInterval(() => {
             setIsAnimating(true);
@@ -223,8 +223,8 @@ const TestimonialCard = ({ index }: { index: number }) => {
                     ))}
                 </div>
                 <p className="my-4 text-muted-foreground dark:text-neutral-300 flex-grow">
-                    "Kalpi Capital has transformed how we build and test quantitative strategies. The no-code interface
-                    makes it accessible to our entire team, not just the developers."
+                    &quot;Kalpi Capital has transformed how we build and test quantitative strategies. The no-code interface
+                    makes it accessible to our entire team, not just the developers.&quot;
                 </p>
                 <div className="flex items-center gap-3 mt-4">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#4CAF50]/20 to-[#8BC34A]/20 flex items-center justify-center text-[#4CAF50] font-bold">
@@ -332,7 +332,7 @@ export default function HomePage() {
                                 transition={{ duration: 0.6 }}
                             >
                                 <span className="inline-block py-1 px-3 text-sm font-medium bg-gradient-to-r from-[#4CAF50]/10 to-[#8BC34A]/10 text-[#4CAF50] rounded-full mb-4 backdrop-blur-sm border border-[#4CAF50]/20">
-                                    India's First Systematic Quantitative Research Platform
+                                    India&quot;s First Systematic Quantitative Research Platform
                                 </span>
                             </motion.div>
 
