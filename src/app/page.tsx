@@ -40,7 +40,7 @@ interface WorkflowStep {
 const AnimatedText = () => {
     const phrases = ["Quant Systematic", "AI-Powered", "Data-Driven", "No-Code"];
     const [currentPhrase, setCurrentPhrase] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
+    const [_isAnimating, setIsAnimating] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
