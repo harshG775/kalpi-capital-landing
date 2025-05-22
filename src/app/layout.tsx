@@ -29,10 +29,10 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-                    <div className="flex flex-col min-h-screen relative bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-black transition-colors duration-300">
-                        <Navbar />
+                    {/* <div className="flex flex-col min-h-screen relative bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-black transition-colors duration-300"> */}
+                        {/* <Navbar /> */}
                         {children}
-                        </div>
+                        {/* </div> */}
                 </ThemeProvider>
             </body>
         </html>
