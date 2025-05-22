@@ -334,11 +334,11 @@ export default function HomePage() {
                                     {/* Placeholder for 3D visualization */}
                                     <div
                                         className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-emerald-500/20 animate-spin"
-                                        style={{ animationDuration: "20s" }}
+                                        style={{ animationDuration: "15s" }}
                                     />
                                     <div
-                                        className="absolute inset-8 rounded-full border-4 border-dashed border-border animate-spin"
-                                        style={{ animationDuration: "15s", animationDirection: "reverse" }}
+                                        className="absolute inset-8 rounded-full border-4 border-dashed border-primary/40 animate-spin"
+                                        style={{ animationDuration: "20s", animationDirection: "reverse" }}
                                     />
                                     <div
                                         className="absolute inset-16 rounded-full bg-gradient-to-br from-primary/40 to-emerald-500/30 animate-spin"
