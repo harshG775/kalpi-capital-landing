@@ -467,8 +467,8 @@ export default function HomePage() {
                                 className="mt-32 text-center max-w-3xl mx-auto"
                             >
                                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                                    India's First <span className="text-primary">Systematic Quantitative</span> Research
-                                    Platform
+                                    India&apos;s First <span className="text-primary">Systematic Quantitative</span>{" "}
+                                    Research Platform
                                 </h2>
                                 <p className="text-xl text-muted-foreground mb-8">
                                     Join thousands of investors who are already using Kalpi Capital to build Quant
@@ -566,9 +566,9 @@ export default function HomePage() {
                                                 </div>
                                             </div>
                                             <p className="text-muted-foreground">
-                                                "Kalpi Capital has transformed how we build and test quantitative
+                                                &quot;Kalpi Capital has transformed how we build and test quantitative
                                                 strategies. The no-code interface makes it accessible to our entire
-                                                team, not just the developers."
+                                                team, not just the developers.&quot;
                                             </p>
                                         </motion.div>
                                     ))}
