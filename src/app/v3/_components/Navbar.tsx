@@ -95,13 +95,13 @@ export default function Navbar() {
     return (
         <div className="relative">
             <nav className="flex justify-between items-center p-4 bg-background shadow-sm relative z-50">
-                <Link href="/" className="flex items-center justify-center">
+                <Link href="/" className="flex items-center justify-center  rounded-xl overflow-hidden">
                     <Image
                         src="/kalpi-logo.jpeg"
                         alt="Kalpi Logo"
                         width={80}
                         height={80}
-                        className="mix-blend-multiply h-12 w-auto object-contain"
+                        className="h-12 w-auto object-contain"
                     />
                 </Link>
 

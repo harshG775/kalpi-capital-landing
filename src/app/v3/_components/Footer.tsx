@@ -33,20 +33,25 @@ export default function Footer() {
     return (
         <footer>
             <div className="flex max-w-7xl mx-auto gap-4 py-16 px-4 flex-col flex-wrap md:flex-row md:items-center">
-                <Link href={footerLink.logo.link} className="w-[80px] flex justify-start md:justify-center">
-                    <Image
-                        src={footerLink.logo.image}
-                        alt="logo"
-                        width={80}
-                        height={80}
-                        className="mix-blend-multiply h-12 w-auto object-contain"
-                    />
-                </Link>
+                <div className="flex items-start md:justify-center">
+                    <Link href="/" className="  rounded-xl overflow-hidden">
+                        <Image
+                            src="/kalpi-logo.jpeg"
+                            alt="Kalpi Logo"
+                            width={80}
+                            height={80}
+                            className="h-12 w-auto object-contain"
+                        />
+                    </Link>
+                </div>
 
                 <div className="flex md:items-center items-start flex-1 gap-4 md:flex-row flex-col ">
-                        <Link href="/" className="text-secondary-foreground hover:text-foreground/60 transition-colors font-semibold">
-                            Get Started for Free
-                        </Link>
+                    <Link
+                        href="/"
+                        className="text-secondary-foreground hover:text-foreground/60 transition-colors font-semibold"
+                    >
+                        Get Started for Free
+                    </Link>
                     {footerLink.links.map((link, index) => (
                         <Link
                             key={index}
