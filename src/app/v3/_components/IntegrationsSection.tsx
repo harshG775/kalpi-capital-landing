@@ -4,7 +4,7 @@ import { StarsIcon } from "lucide-react";
 
 export default function IntegrationsSection() {
     return (
-        <section id="integrations" className="py-16 md:py-24 bg-primary-foreground/80">
+        <section id="integrations" className="py-16 md:py-24 bg-gradient-to-b from-primary/10 via-primary/10  to-background/20">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
