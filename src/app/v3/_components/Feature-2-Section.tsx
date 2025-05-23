@@ -15,15 +15,7 @@ export default function Feature2Section() {
                         viewport={{ once: true }}
                         className="relative order-2 lg:order-1"
                     >
-                        <div className="bg-white dark:bg-neutral-700 rounded-xl shadow-xl overflow-hidden border border-gray-200 dark:border-neutral-600">
-                            <Image
-                                src="/placeholder.svg?height=500&width=600"
-                                alt="Portfolio Management Interface"
-                                width={600}
-                                height={500}
-                                className="w-full h-auto"
-                            />
-                        </div>
+                        <MadeOmniscient />
                     </motion.div>
 
                     <motion.div
@@ -52,5 +44,97 @@ export default function Feature2Section() {
                 </div>
             </div>
         </section>
+    );
+}
+
+function MadeOmniscient() {
+    const elements = [
+        {
+            name: "Deal",
+            subname: "Deal",
+            color: "bg-blue-100 text-blue-800",
+        },
+        { name: "Deal Owner", subname: "Deal", color: "bg-blue-100 text-blue-800" },
+        { name: "Forecast Amount", subname: "Deal", color: "bg-blue-100 text-blue-800" },
+        {
+            name: "Next Step",
+            subname: "Deal",
+            color: "bg-blue-100 text-blue-800",
+        },
+        {
+            name: "Pain Points",
+            subname: "Deal",
+            color: "bg-blue-100 text-blue-800",
+        },
+        { name: "Tech", subname: "Deal", color: "bg-blue-100 text-blue-800" },
+        { name: "Company", subname: "Deal", color: "bg-blue-100 text-blue-800" },
+
+        { name: "ARR", subname: "Company", color: "bg-green-100 text-green-800" },
+        { name: "Company", subname: "Company", color: "bg-green-100 text-green-800" },
+        { name: "Goals", subname: "Company", color: "bg-green-100 text-green-800" },
+        {
+            name: "Engagement",
+            subname: "Company",
+            color: "bg-green-100 text-green-800",
+        },
+
+        {
+            name: "Contact",
+            subname: "Contact",
+            color: "bg-purple-100 text-purple-800",
+        },
+        { name: "Buying Role", subname: "Contact", color: "bg-purple-100 text-purple-800" },
+        {
+            name: "Lead Status",
+            subname: "Contact",
+            color: "bg-purple-100 text-purple-800",
+        },
+        { name: "Contact", subname: "Contact", color: "bg-purple-100 text-purple-800" },
+    ];
+
+    return (
+        <div className="relative h-[500px] w-full max-w-4xl mx-auto p-8">
+            <div className="relative w-[500px] h-[500px] mx-auto">
+                <motion.div
+                    className="absolute inset-0 flex items-center justify-center z-10"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                >
+                    <div className="relative h-32 w-32 rounded-full bg-white shadow-xl border-8 border-gray-100 flex items-center justify-center overflow-hidden">
+                        <Image
+                            src="/kalpi-logo.jpeg"
+                            alt="Company Logo"
+                            width={80}
+                            height={80}
+                            className="object-contain scale-120"
+                        />
+                    </div>
+                </motion.div>
+
+                {elements.map((item, index) => {
+                    const total = elements.length;
+                    const radius = 220; // Adjust circle size
+                    const angle = (index * (360 / total) - 90) * (Math.PI / 180);
+                    const x = Math.cos(angle) * radius;
+                    const y = Math.sin(angle) * radius;
+
+                    return (
+                        <div
+                            key={index}
+                            className="absolute px-2 py-1 rounded shadow-md flex items-center gap-2"
+                            style={{
+                                left: "50%",
+                                top: "50%",
+                                transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+                            }}
+                        >
+                            <div>{item.name}</div>
+                            <div className={`${item.color} px-2 py-1 rounded shadow-md`}>{item.subname}</div>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
     );
 }

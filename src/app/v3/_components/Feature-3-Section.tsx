@@ -2,6 +2,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { BadgeWithIcon } from "./BadgeWithIcon";
 import { Badge } from "@/components/ui/badge";
+import { CalendarDaysIcon, Cloud } from "lucide-react";
 
 export default function Feature3Section() {
     return (
@@ -21,8 +22,8 @@ export default function Feature3Section() {
                             Smart Follow-Ups, <span className="text-primary">Always on Time</span>
                         </h2>
                         <p className="text-lg text-muted-foreground font-medium mb-8">
-                            It&apos;s easy to set up automated follow-ups when you have Kalpi&apos;s AI on your side. Our system
-                            learns from successful strategies to suggest optimal rebalancing times.
+                            It&apos;s easy to set up automated follow-ups when you have Kalpi&apos;s AI on your side.
+                            Our system learns from successful strategies to suggest optimal rebalancing times.
                         </p>
                         <BadgeWithIcon
                             texts={["Automatic Task Detection", "Draft Email Follow-Ups"]}
@@ -38,18 +39,68 @@ export default function Feature3Section() {
                         viewport={{ once: true }}
                         className="relative"
                     >
-                        <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-xl overflow-hidden border border-gray-200 dark:border-neutral-700">
-                            <Image
-                                src="/placeholder.svg?height=500&width=600"
-                                alt="Automated Follow-ups Interface"
-                                width={600}
-                                height={500}
-                                className="w-full h-auto"
-                            />
-                        </div>
+                        <IntroductoryMeeting />
                     </motion.div>
                 </div>
             </div>
         </section>
+    );
+}
+
+function IntroductoryMeeting() {
+    return (
+        <div>
+            <div className="flex items-center gap-2 bg-background p-4 rounded-full shadow-xl">
+                <div>
+                    <CalendarDaysIcon className="size-12 bg-blue-900 text-blue-100 rounded-full p-3" />
+                </div>
+                <div className="font-semibold text-xl text-gray-900">Introductory Meeting</div>
+                <div className="ml-auto">
+                    <Badge className="bg-blue-400/10 text-gray-950 rounded-full">Nov 13</Badge>
+                </div>
+            </div>
+            <div className="pl-16">
+                <div className="flex items-center gap-2 bg-blue-200/80 p-2 rounded-full mt-4">
+                    <Cloud className="size-10 bg-white text-blue-950 rounded-full p-3" />
+                    <div className="font-medium text-gray-900">Cloud Storage</div>
+                    <div className="ml-auto">
+                        <div className="rounded-full bg-rose-400 text-rose-50 px-3 py-1 size-10 flex justify-center items-center font-semibold">
+                            JR
+                        </div>
+                    </div>
+                </div>
+                <div className="flex items-center gap-2 bg-blue-200/80 p-2 rounded-full mt-4">
+                    <Cloud className="size-10 bg-white text-blue-950 rounded-full p-3" />
+                    <div className="font-medium text-gray-900">Send Pricing Options</div>
+                    <div className="ml-auto">
+                        <div className="rounded-full bg-rose-400 text-rose-50 px-3 py-1 size-10 flex justify-center items-center font-semibold">
+                            AD
+                        </div>
+                    </div>
+                </div>
+                <div className="flex items-center gap-2 bg-blue-200/80 p-2 rounded-full mt-4">
+                    <Cloud className="size-10 bg-white text-blue-950 rounded-full p-3" />
+                    <div className="font-medium text-gray-900">Schedule Next Meeting</div>
+                    <div className="ml-auto">
+                        <div className="rounded-full bg-rose-400 text-rose-50 px-3 py-1 size-10 flex justify-center items-center font-semibold">
+                            JR
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="flex items-start gap-4 p-4 mt-4">
+                <div className=" rounded-full size-12 overflow-hidden ">
+                    <img
+                        src="https://framerusercontent.com/images/t3tANQCYnree6SiGycrQvOcOI.png"
+                        alt="feature-3"
+                        className="w-full h-full object-contain"
+                    />
+                </div>
+                <div>
+                    <div className="font-semibold">Khari Devin</div>
+                    <div className="text-xs">CTO</div>
+                </div>
+            </div>
+        </div>
     );
 }
