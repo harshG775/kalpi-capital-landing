@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { StarsIcon } from "lucide-react";
 
 export default function IntegrationsSection() {
 
@@ -12,6 +14,12 @@ export default function IntegrationsSection() {
                     viewport={{ once: true }}
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
+                    <Button variant="outline" className="mb-6 hover:bg-background" asChild>
+                        <div>
+                            <StarsIcon className="h-10 w-10 text-primary inline-block" />
+                            Effortless Integrations
+                        </div>
+                    </Button>
                     <h2 className="text-4xl md:text-7xl font-bold mb-6">
                         We make your <span className="text-primary">sales stack</span> work harder & smarter
                     </h2>
