@@ -122,7 +122,7 @@ function MadeOmniscient() {
                     return (
                         <div
                             key={index}
-                            className="absolute px-2 py-1 rounded shadow-md flex items-center gap-2"
+                            className="absolute px-2 py-1 rounded shadow-md flex items-center gap-2 hover:scale-110 transition-all duration-300 z-30"
                             style={{
                                 left: "50%",
                                 top: "50%",
