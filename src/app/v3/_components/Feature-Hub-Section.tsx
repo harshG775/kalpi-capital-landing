@@ -16,7 +16,7 @@ export default function FeatureHubSection() {
                     <Button variant="default" className="mb-6 h-6">
                         AI-Enabled Sales
                     </Button>
-                    <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         Your Modern <span className="text-primary">Sales Intelligence Hub</span>
                     </h2>
                     <p className="text-xl text-muted-foreground font-semibold mb-8">

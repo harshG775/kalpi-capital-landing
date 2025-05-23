@@ -18,7 +18,7 @@ export default function Feature3Section() {
                         <Badge variant="outline" className="mb-6 outline-1 outline-green-500 rounded-full">
                             Sales Activity Analytics
                         </Badge>
-                        <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
                             Smart Follow-Ups, <span className="text-primary">Always on Time</span>
                         </h2>
                         <p className="text-xl text-muted-foreground font-semibold mb-8">

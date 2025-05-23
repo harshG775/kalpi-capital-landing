@@ -17,7 +17,7 @@ export default function Feature1Section() {
                         <Badge variant="outline" className="mb-6 outline-1 outline-pink-500 rounded-full">
                             Sales Insights
                         </Badge>
-                        <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
                             Your Sales <span className="text-primary">Memory, Perfected</span>
                         </h2>
                         <p className="text-xl text-muted-foreground font-semibold mb-8">
