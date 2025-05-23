@@ -4,7 +4,7 @@ import { StarsIcon } from "lucide-react";
 
 export default function IntegrationsSection() {
     return (
-        <section id="integrations" className="py-16 md:py-24">
+        <section id="integrations" className="py-16 md:py-24 bg-primary-foreground/80">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ const integrations = [
 
 function Sliders() {
     return (
-        <div className="flex flex-row justify-center gap-20 bg-chart-2/5">
+        <div className="flex flex-row justify-center gap-20">
             <div
                 className="slider"
                 data-reverse="true"
