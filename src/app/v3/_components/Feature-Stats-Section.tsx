@@ -47,13 +47,13 @@ export default function FeatureStatsSection() {
                         viewport={{ once: true }}
                         className="order-1 lg:order-2"
                     >
-                        <Badge variant="outline" className="mb-6 outline-1 outline-primary rounded-full">
+                        <Badge variant="outline" className="mb-6 outline-1 outline-blue-500 rounded-full">
                             Sales Activity Analytics
                         </Badge>
                         <h2 className="text-4xl md:text-6xl font-bold mb-6">
                             Your Pitch, <span className="text-primary">By the Numbers</span>
                         </h2>
-                        <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                        <p className="text-xl text-muted-foreground font-semibold mb-8">
                             These are just the beginning of progress in quant and data-driven investing. Our platform is
                             designed to help you create, backtest, and deploy strategies with confidence.
                         </p>
@@ -68,7 +68,7 @@ export default function FeatureStatsSection() {
                         <BadgeWithIcon
                             texts={["Sentiment Analysis", "Engagement", "Speaking Patterns"]}
                             className="mt-8"
-                            iconColor="primary"
+                            iconColor="blue"
                         />
                     </motion.div>
                 </div>

@@ -7,8 +7,8 @@ import { MagneticButton } from "@/components/ui/magnetic-button";
 
 export default function HeroSection() {
     return (
-        <section className="py-12 md:py-18 lg:px-0 px-4">
-            <div className="max-w-[96rem] mx-auto">
+        <section className="py-12 md:py-18 lg:px-0 px-4 overflow-hidden">
+            <div className="max-w-[96rem] mx-auto ">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-top">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

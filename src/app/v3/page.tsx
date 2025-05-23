@@ -6,6 +6,7 @@ import CTASection from "./_components/CTASection";
 import IntegrationsSection from "./_components/IntegrationsSection";
 import FeatureHubSection from "./_components/Feature-Hub-Section";
 import FeatureStatsSection from "./_components/Feature-Stats-Section";
+import Feature3Section from "./_components/Feature-3-Section";
 
 export default function V3page() {
     return (
@@ -13,6 +14,7 @@ export default function V3page() {
             <Navbar />
             <main>
                 <HeroSection />
+                <Feature3Section />
                 <FeatureStatsSection />
                 <FeatureHubSection />
                 <IntegrationsSection />
