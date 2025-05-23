@@ -7,7 +7,6 @@ import IntegrationsSection from "./_components/IntegrationsSection";
 import FeatureHubSection from "./_components/Feature-Hub-Section";
 import FeatureStatsSection from "./_components/Feature-Stats-Section";
 import Feature3Section from "./_components/Feature-3-Section";
-import Feature2Section from "./_components/Feature-2-Section";
 import Feature1Section from "./_components/Feature-1-Section";
 
 export default function V3page() {
