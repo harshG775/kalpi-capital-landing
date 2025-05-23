@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Users, Shield, ArrowUpRight } from "lucide-react";
 import { BadgeWithIcon } from "./BadgeWithIcon";
 import { Badge } from "@/components/ui/badge";
 
@@ -22,7 +21,7 @@ export default function Feature3Section() {
                             Smart Follow-Ups, <span className="text-primary">Always on Time</span>
                         </h2>
                         <p className="text-lg text-muted-foreground font-medium mb-8">
-                            It's easy to set up automated follow-ups when you have Kalpi's AI on your side. Our system
+                            It&apos;s easy to set up automated follow-ups when you have Kalpi&apos;s AI on your side. Our system
                             learns from successful strategies to suggest optimal rebalancing times.
                         </p>
                         <BadgeWithIcon

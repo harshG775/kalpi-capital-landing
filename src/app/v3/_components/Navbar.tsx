@@ -147,8 +147,8 @@ export default function Navbar() {
                     >
                         <div className="p-4 space-y-4">
                             {/* Mobile Navigation Links */}
-                            {navLinks.map((link, index) => (
-                                <motion.div key={link.name} variants={itemVariants} className="block">
+                            {navLinks.map((link, idx) => (
+                                <motion.div key={idx} variants={itemVariants} className="block">
                                     <Link
                                         href={link.href}
                                         className="block py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"

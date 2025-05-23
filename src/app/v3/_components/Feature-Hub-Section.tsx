@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Check, StarsIcon } from "lucide-react";
+import { Check } from "lucide-react";
 import Image from "next/image";
 export default function FeatureHubSection() {
     return (

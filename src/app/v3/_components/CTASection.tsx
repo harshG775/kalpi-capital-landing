@@ -16,7 +16,7 @@ export default function CTASection() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl md:text-6xl font-bold mb-6 text-center">
-                            Unlock Your Sales Team's Full Potential
+                            Unlock Your Sales Team&apos;s Full Potential
                         </h2>
                         <p className="text-xl text-primary-foreground/90 text-center">
                             Streamline operations and drive results with our cutting-edge quant investing platform.

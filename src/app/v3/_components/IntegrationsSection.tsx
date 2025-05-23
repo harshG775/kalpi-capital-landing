@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { StarsIcon } from "lucide-react";
 
 export default function IntegrationsSection() {
     return (

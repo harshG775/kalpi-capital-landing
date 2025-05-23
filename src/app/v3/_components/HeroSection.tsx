@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { RollingTextAnimation } from "./RollingTextAnimation";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, Play, StarsIcon, TrendingUp } from "lucide-react";
+import { ArrowRight, Check, StarsIcon, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 
