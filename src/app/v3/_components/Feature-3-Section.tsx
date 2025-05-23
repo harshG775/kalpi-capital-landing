@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { BadgeWithIcon } from "./BadgeWithIcon";
 import { Badge } from "@/components/ui/badge";
