@@ -45,14 +45,14 @@ export default function Footer() {
                 </Link>
 
                 <div className="flex md:items-center items-start flex-1 gap-4 md:flex-row flex-col ">
-                        <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors font-semibold">
+                        <Link href="/" className="text-secondary-foreground hover:text-foreground/60 transition-colors font-semibold">
                             Get Started for Free
                         </Link>
                     {footerLink.links.map((link, index) => (
                         <Link
                             key={index}
                             href={link.link}
-                            className="text-muted-foreground hover:text-foreground transition-colors"
+                            className="text-secondary-foreground hover:text-foreground/60 transition-colors"
                         >
                             {link.title}
                         </Link>
@@ -60,11 +60,11 @@ export default function Footer() {
 
                     <Link
                         href="/"
-                        className="md:ml-auto text-muted-foreground hover:text-foreground transition-colors"
+                        className="md:ml-auto text-secondary-foreground hover:text-foreground/60 transition-colors"
                     >
                         Terms
                     </Link>
-                    <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+                    <Link href="/" className="text-secondary-foreground hover:text-foreground/60 transition-colors">
                         Privacy
                     </Link>
                 </div>
