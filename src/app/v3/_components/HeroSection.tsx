@@ -30,7 +30,7 @@ export default function HeroSection() {
                             />
                             Investing
                         </h1>
-                        <p className="mt-8 text-xl text-gray-600 dark:text-gray-300 mb-8">
+                        <p className="text-lg text-muted-foreground font-medium mb-8">
                             Create, backtest and deploy Quant AI/ML portfolios without writing code. Harness the power
                             of data-driven decisions.
                         </p>

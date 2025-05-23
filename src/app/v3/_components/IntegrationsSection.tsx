@@ -22,7 +22,7 @@ export default function IntegrationsSection() {
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         We make your <span className="text-primary">sales stack</span> work harder & smarter
                     </h2>
-                    <p className="text-xl text-muted-foreground font-semibold">
+                    <p className="text-lg text-muted-foreground font-medium mb-8">
                         Kalpi integrates with your favorite data providers and tools to create a seamless workflow.
                     </p>
                 </motion.div>

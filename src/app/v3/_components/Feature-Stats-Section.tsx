@@ -53,7 +53,7 @@ export default function FeatureStatsSection() {
                         <h2 className="text-4xl md:text-5xl font-bold mb-6">
                             Your Pitch, <span className="text-primary">By the Numbers</span>
                         </h2>
-                        <p className="text-xl text-muted-foreground font-semibold mb-8">
+                        <p className="text-lg text-muted-foreground font-medium mb-8">
                             These are just the beginning of progress in quant and data-driven investing. Our platform is
                             designed to help you create, backtest, and deploy strategies with confidence.
                         </p>

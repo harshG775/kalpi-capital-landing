@@ -20,7 +20,7 @@ export default function Feature1Section() {
                         <h2 className="text-4xl md:text-5xl font-bold mb-6">
                             Your Sales <span className="text-primary">Memory, Perfected</span>
                         </h2>
-                        <p className="text-xl text-muted-foreground font-semibold mb-8">
+                        <p className="text-lg text-muted-foreground font-medium mb-8">
                             Kalpi Capital remembers every detail of your quant strategies, so you can focus on creating
                             new ones. Our AI-powered platform tracks all your backtests, optimizations, and performance
                             metrics.

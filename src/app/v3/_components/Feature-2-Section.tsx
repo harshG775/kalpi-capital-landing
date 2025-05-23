@@ -39,7 +39,7 @@ export default function Feature2Section() {
                         <h2 className="text-4xl md:text-5xl font-bold mb-6">
                             Your CRM, <span className="text-primary">Made Omniscient</span>
                         </h2>
-                        <p className="text-xl text-muted-foreground font-semibold mb-8">
+                        <p className="text-lg text-muted-foreground font-medium mb-8">
                             Our platform combines powerful technology with an intuitive interface to help you succeed in
                             systematic portfolio construction.
                         </p>
