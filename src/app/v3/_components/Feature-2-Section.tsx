@@ -37,7 +37,7 @@ export default function Feature2Section() {
                             Automated CRM Updates
                         </Badge>
                         <h2 className="text-4xl md:text-6xl font-bold mb-6">
-                            Your CRM, <span className="text-[#4CAF50]">Made Omniscient</span>
+                            Your CRM, <span className="text-primary">Made Omniscient</span>
                         </h2>
                         <p className="text-xl text-muted-foreground font-semibold mb-8">
                             Our platform combines powerful technology with an intuitive interface to help you succeed in
