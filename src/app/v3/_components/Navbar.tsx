@@ -1,12 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
+    const { theme, setTheme } = useTheme();
+
     const [isOpen, setIsOpen] = useState(false);
     const navLinks = [
         {
@@ -91,7 +94,7 @@ export default function Navbar() {
 
     return (
         <div className="relative">
-            <nav className="flex justify-between items-center p-4 bg-white shadow-sm relative z-50">
+            <nav className="flex justify-between items-center p-4 bg-background shadow-sm relative z-50">
                 <Link href="/" className="flex items-center justify-center">
                     <Image
                         src="/kalpi-logo.jpeg"
@@ -121,6 +124,12 @@ export default function Navbar() {
                     </div>
 
                     {/* Mobile Menu Toggle */}
+                    <button
+                        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                        className="text-muted-foreground hover:text-foreground"
+                    >
+                        {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
                     <Button
                         variant="ghost"
                         size="sm"
@@ -139,23 +148,17 @@ export default function Navbar() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-40"
+                        className="lg:hidden absolute top-full left-0 right-0 bg-background shadow-lg border-t z-40"
                         initial="closed"
                         animate="open"
                         exit="closed"
                         variants={menuVariants}
                     >
-                        <div className="p-4 space-y-4">
+                        <div className="p-4 space-y-4 flex flex-col">
                             {/* Mobile Navigation Links */}
                             {navLinks.map((link, idx) => (
-                                <motion.div key={idx} variants={itemVariants} className="block">
-                                    <Link
-                                        href={link.href}
-                                        className="block py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        {link.name}
-                                    </Link>
+                                <motion.div key={idx} variants={itemVariants} onClick={() => setIsOpen(false)}>
+                                    <AnimatedLink href={link.href}>{link.name}</AnimatedLink>
                                 </motion.div>
                             ))}
 
@@ -201,7 +204,7 @@ export default function Navbar() {
 // Enhanced AnimatedLink component
 function AnimatedLink({ href, children }: { href: string; children: React.ReactNode }) {
     return (
-        <Link href={href} className="group relative overflow-hidden h-6 text-sm font-medium text-no-wrap">
+        <Link href={href} className="block group relative overflow-hidden h-6 text-sm font-medium text-no-wrap">
             <span className="w-full h-6 inline-flex items-center transition-transform duration-300 group-hover:-translate-y-full">
                 {children}
             </span>
