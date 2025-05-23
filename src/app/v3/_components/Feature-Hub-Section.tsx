@@ -19,7 +19,7 @@ export default function FeatureHubSection() {
                     <h2 className="text-4xl md:text-6xl font-bold mb-6">
                         Your Modern <span className="text-primary">Sales Intelligence Hub</span>
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-300">
+                    <p className="text-xl text-muted-foreground font-semibold">
                         Kalpi brings together all the tools you need to build, test, and deploy quantitative investment
                         strategies in one place.
                     </p>
@@ -31,14 +31,13 @@ export default function FeatureHubSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="bg-white dark:bg-neutral-800 rounded-xl shadow-xl overflow-hidden border border-gray-200 dark:border-neutral-700 p-4"
                     >
                         <Image
-                            src="/placeholder.svg?height=600&width=1200"
+                            src="/hub.png"
                             alt="Kalpi Capital Platform Hub"
                             width={1200}
                             height={600}
-                            className="w-full h-auto rounded-lg"
+                            className="w-full h-auto rounded-lg mix-blend-multiply"
                         />
                     </motion.div>
 
