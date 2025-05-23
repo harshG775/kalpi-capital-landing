@@ -15,7 +15,7 @@ export default function CTASection() {
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl md:text-6xl font-bold mb-6 text-center">
+                        <h2 className="text-4xl md:text-6xl font-bold mb-6 text-center">
                             Unlock Your Sales Team's Full Potential
                         </h2>
                         <p className="text-xl text-primary-foreground/90 text-center">
