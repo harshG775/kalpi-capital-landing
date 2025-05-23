@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 import Image from "next/image";
 export default function FeatureHubSection() {
     return (
-        <section id="how-it-works" className="py-16 md:py-24 bg-primary-foreground/30">
+        <section id="how-it-works" className="py-16 md:py-24 bg-primary-foreground/20">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ export default function FeatureHubSection() {
                             alt="Kalpi Capital Platform Hub"
                             width={1200}
                             height={600}
-                            className="h-auto rounded-lg mix-blend-multiply"
+                            className="h-auto rounded-lg"
                         />
                     </motion.div>
 

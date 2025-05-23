@@ -24,7 +24,7 @@ export default function CTASection() {
                         <div className="flex justify-center w-full py-8 max-w-2xl mx-auto">
                             <Button
                                 asChild
-                                className=" h-14 rounded-4xl px-16 has-[>svg]:px-6 bg-primary-foreground text-foreground hover:bg-primary-foreground/80"
+                                className=" h-14 rounded-4xl px-16 has-[>svg]:px-6 bg-primary-foreground text-primary hover:bg-primary-foreground/80"
                             >
                                 <MagneticButton>
                                     Start for Free
