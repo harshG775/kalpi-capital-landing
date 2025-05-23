@@ -4,7 +4,10 @@ import { StarsIcon } from "lucide-react";
 
 export default function IntegrationsSection() {
     return (
-        <section id="integrations" className="py-16 md:py-24 bg-gradient-to-b from-primary/10 via-primary/10  to-background/20">
+        <section
+            id="integrations"
+            className="py-16 md:py-24 bg-gradient-to-b from-primary/10 via-primary/10  to-background/20"
+        >
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -69,8 +72,8 @@ function Sliders() {
                 data-reverse="true"
                 style={
                     {
-                        "--width": "180px",
-                        "--height": "180px",
+                        "--width": "140px",
+                        "--height": "140px",
                         "--quantity": "4",
                         "--duration": "20s",
                     } as React.CSSProperties
@@ -92,8 +95,8 @@ function Sliders() {
                 className="slider"
                 style={
                     {
-                        "--width": "180px",
-                        "--height": "180px",
+                        "--width": "140px",
+                        "--height": "140px",
                         "--quantity": "4",
                         "--duration": "20s",
                     } as React.CSSProperties
@@ -116,8 +119,8 @@ function Sliders() {
                 data-reverse="true"
                 style={
                     {
-                        "--width": "180px",
-                        "--height": "180px",
+                        "--width": "140px",
+                        "--height": "140px",
                         "--quantity": "4",
                         "--duration": "20s",
                     } as React.CSSProperties
@@ -139,16 +142,20 @@ function Sliders() {
     );
 }
 const SliderItem = ({ name, tag, image }: { name: string; tag: string; image: string }) => (
-    <div className="w-full h-full rounded-2xl bg-white flex flex-col items-center justify-between p-4 shadow-sm">
+    <div className="w-full h-full rounded-2xl bg-background flex flex-col justify-between p-4 shadow-sm">
         {/* Image Container */}
-        <div className="bg-gray-50 rounded-2xl w-full h-2/3 flex items-center justify-center shadow-sm">
-            <img src={image} alt={name} className="w-16 h-16 object-contain" />
+        <div className="rounded-2xl w-full h-1/2 flex items-center">
+            <img src={image} alt={name} className="w-10 h-10 object-contain" />
         </div>
 
         {/* Text + Tag */}
-        <div className="flex flex-col items-center gap-2 mt-2">
-            <p className="text-center text-sm font-medium">{name}</p>
-            <div className="bg-[#e6f0ff] text-[#0b5cd5] text-xs font-medium px-3 py-1 rounded-full">{tag}</div>
+        <div className="flex flex-col gap-2">
+            <p className="text-sm font-medium">{name}</p>
+            <div>
+                <div className="bg-blue-50 text-blue-500 text-xs font-medium px-3 py-1 rounded-full text-center">
+                    {tag}
+                </div>
+            </div>
         </div>
     </div>
 );

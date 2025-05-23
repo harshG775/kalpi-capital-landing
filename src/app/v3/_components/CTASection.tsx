@@ -41,7 +41,7 @@ export default function CTASection() {
                         viewport={{ once: true }}
                         className="relative"
                     >
-                        <div className="bg-primary-foreground rounded-t-xl overflow-hidden">
+                        <div className="bg-primary-foreground rounded-t-xl overflow-hidden max-w-3xl mx-auto h-[480px]">
                             <div className="h-8 bg-gray-100 flex items-center px-4">
                                 <div className="flex gap-2">
                                     <div className="w-3 h-3 rounded-full bg-red-500" />
@@ -54,7 +54,7 @@ export default function CTASection() {
                                 alt="Kalpi Capital Platform"
                                 width={600}
                                 height={400}
-                                className="w-full h-[400px] object-cover"
+                                className="w-full object-cover"
                             />
                         </div>
                     </motion.div>

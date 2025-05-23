@@ -25,7 +25,7 @@ export default function FeatureHubSection() {
                     </p>
                 </motion.div>
 
-                <div className="relative">
+                <div className="relative max-w-3xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export default function FeatureHubSection() {
                             alt="Kalpi Capital Platform Hub"
                             width={1200}
                             height={600}
-                            className="w-full h-auto rounded-lg mix-blend-multiply"
+                            className="h-auto rounded-lg mix-blend-multiply"
                         />
                     </motion.div>
 
