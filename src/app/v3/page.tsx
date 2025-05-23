@@ -4,6 +4,7 @@ import Footer from "./_components/Footer";
 import HeroSection from "./_components/HeroSection";
 import CTASection from "./_components/CTASection";
 import IntegrationsSection from "./_components/IntegrationsSection";
+import FeatureHubSection from "./_components/Feature-Hub-Section";
 
 export default function V3page() {
     return (
@@ -11,6 +12,7 @@ export default function V3page() {
             <Navbar />
             <main>
                 <HeroSection />
+                <FeatureHubSection/>
                 <IntegrationsSection />
                 <CTASection />
             </main>

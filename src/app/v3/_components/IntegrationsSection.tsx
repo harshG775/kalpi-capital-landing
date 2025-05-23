@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { StarsIcon } from "lucide-react";
 
 export default function IntegrationsSection() {
-
     return (
         <section id="integrations" className="py-16 md:py-24">
             <div className="container mx-auto px-4">
@@ -14,13 +13,10 @@ export default function IntegrationsSection() {
                     viewport={{ once: true }}
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
-                    <Button variant="outline" className="mb-6 hover:bg-background" asChild>
-                        <div>
-                            <StarsIcon className="h-10 w-10 text-primary inline-block" />
-                            Effortless Integrations
-                        </div>
+                    <Button variant="outline" className="mb-6 h-6 hover:bg-background border-primary">
+                        Effortless Integrations
                     </Button>
-                    <h2 className="text-4xl md:text-7xl font-bold mb-6">
+                    <h2 className="text-3xl md:text-6xl font-bold mb-6">
                         We make your <span className="text-primary">sales stack</span> work harder & smarter
                     </h2>
                     <p className="text-xl text-muted-foreground font-semibold">
