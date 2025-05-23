@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
@@ -13,9 +14,10 @@ export default function FeatureHubSection() {
                     viewport={{ once: true }}
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
-                    <Button variant="default" className="mb-6 h-6">
+                   
+                    <Badge variant="outline" className="mb-6 outline-1 bg-red-500 text-white outline-red-500 rounded-full">
                         AI-Enabled Sales
-                    </Button>
+                    </Badge>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         Your Modern <span className="text-primary">Sales Intelligence Hub</span>
                     </h2>

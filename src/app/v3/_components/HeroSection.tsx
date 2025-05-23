@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, StarsIcon, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import { MagneticButton } from "@/components/ui/magnetic-button";
+import { Badge } from "@/components/ui/badge";
 
 export default function HeroSection() {
     return (
@@ -16,12 +17,10 @@ export default function HeroSection() {
                         transition={{ duration: 0.5 }}
                         className="space-y-10 px-8"
                     >
-                        <Button variant="outline" className="hover:bg-background" asChild>
-                            <div>
-                                <StarsIcon className="h-10 w-10 text-primary inline-block" />
-                                Say Hello to Truva AI
-                            </div>
-                        </Button>
+                        <Badge variant="outline" className="border-primary rounded-full">
+                            <StarsIcon className="h-10 w-10 text-primary inline-block" />
+                            Say Hello to Truva AI
+                        </Badge>
                         <h1 className="text-4xl sm:text-7xl font-bold space-y-4 mb-4">
                             We Democratize
                             <RollingTextAnimation

@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -15,9 +16,9 @@ export default function IntegrationsSection() {
                     viewport={{ once: true }}
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
-                    <Button variant="outline" className="mb-6 h-6 hover:bg-background border-primary">
+                    <Badge variant="outline" className="mb-6 h-6 hover:bg-background border-primary rounded-full">
                         Effortless Integrations
-                    </Button>
+                    </Badge>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         We make your <span className="text-primary">sales stack</span> work harder & smarter
                     </h2>
