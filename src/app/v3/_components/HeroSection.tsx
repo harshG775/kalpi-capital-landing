@@ -1,0 +1,124 @@
+import { motion } from "framer-motion";
+import { RollingTextAnimation } from "./RollingTextAnimation";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Check, Play, StarsIcon, TrendingUp } from "lucide-react";
+import Image from "next/image";
+import { MagneticButton } from "@/components/ui/magnetic-button";
+
+export default function HeroSection() {
+    return (
+        <section className="py-12 md:py-18 lg:px-0 px-4">
+            <div className="max-w-[96rem] mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-top">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="space-y-10 px-8"
+                    >
+                        <Button variant="outline" className="hover:bg-background" asChild>
+                            <div>
+                                <StarsIcon className="h-10 w-10 text-primary inline-block" />
+                                Say Hello to Truva AI
+                            </div>
+                        </Button>
+                        <h1 className="text-4xl sm:text-7xl font-bold space-y-4 mb-4">
+                            We Democratize
+                            <RollingTextAnimation
+                                phrases={["Quant Systematic", "AI-Powered", "Data-Driven", "No-Code"]}
+                                className="mt-4 text-primary"
+                            />
+                            Investing
+                        </h1>
+                        <p className="mt-8 text-xl text-gray-600 dark:text-gray-300 mb-8">
+                            Create, backtest and deploy Quant AI/ML portfolios without writing code. Harness the power
+                            of data-driven decisions.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Button asChild className="h-14 rounded-4xl px-16 has-[>svg]:px-6">
+                                <MagneticButton>
+                                    Start Today for Free <ArrowRight className="ml-2 h-4 w-4" />
+                                </MagneticButton>
+                            </Button>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="relative"
+                    >
+                        <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-xl overflow-hidden border border-gray-200 dark:border-neutral-700">
+                            <div className="h-8 bg-gray-100 dark:bg-neutral-700 flex items-center px-4">
+                                <div className="flex gap-2">
+                                    <div className="w-3 h-3 rounded-full bg-red-500" />
+                                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                                    <div className="w-3 h-3 rounded-full bg-green-500" />
+                                </div>
+                            </div>
+                            <Image
+                                src="/hero-image.png"
+                                alt="Kalpi Capital Platform"
+                                width={800}
+                                height={600}
+                                className="w-full h-auto"
+                            />
+                        </div>
+
+                        {/* Floating elements */}
+                        <div className="absolute -top-6 -left-6 bg-primary/10 p-4 rounded-lg shadow-lg backdrop-blur-sm border border-primary/20">
+                            <div className="flex items-center gap-2">
+                                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+                                    <Check className="h-4 w-4" />
+                                </div>
+                                <div className="text-sm font-medium">Strategy Optimized</div>
+                            </div>
+                        </div>
+
+                        <div className="absolute -bottom-6 -right-6 bg-primary/10 p-4 rounded-lg shadow-lg backdrop-blur-sm border border-primary/20">
+                            <div className="flex items-center gap-2">
+                                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+                                    <TrendingUp className="h-4 w-4" />
+                                </div>
+                                <div className="text-sm font-medium">+28% Performance</div>
+                            </div>
+                        </div>
+                        {/* gradient */}
+                        <div className="bg-gradient-to-br from-chart-2/20 to-primary/20 absolute -z-10 rounded-2xl blur-xl scale-200  w-[25rem] h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                    </motion.div>
+                </div>
+
+                {/* Trusted by logos */}
+                <div className="mt-20">
+                    <p className="text-center text-sm text-muted-foreground font-semibold mb-6">
+                        Built by experts from
+                    </p>
+                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                        {["HDFC", "ICICI", "Axis", "Kotak", "SBI"].map((company, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0.5 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="font-serif text-2xl font-medium text-muted-foreground px-4 py-2">
+                                    {company}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+                <div>
+                    <iframe
+                        src="https://player.vimeo.com/video/1069361225?muted=1autopause=0loop=1app_id=122963"
+                        width="100%"
+                        height="100%"
+                        className="max-w-5xl mx-auto aspect-video rounded-2xl mt-20"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+    );
+}
