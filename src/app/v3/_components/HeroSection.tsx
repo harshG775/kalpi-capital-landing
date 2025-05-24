@@ -9,7 +9,7 @@ import { Typewriter } from "../../../components/ui/Typewriter";
 
 export default function HeroSection() {
     return (
-        <section className="py-12 md:py-18 lg:px-0 px-4 overflow-hidden">
+        <section className="pt-28 md:pt-32 py-12 md:py-18 lg:px-0 px-4 overflow-hidden">
             <div className="max-w-[96rem] mx-auto ">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-top">
                     <motion.div

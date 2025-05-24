@@ -59,7 +59,7 @@ export default function Navbar() {
     // Animation variants for menu items
     const itemVariants = {
         closed: {
-            x: -50,
+            x: -18,
             opacity: 0,
             transition: {
                 duration: 0.2,
@@ -93,17 +93,19 @@ export default function Navbar() {
     };
 
     return (
-        <div className="relative">
-            <nav className="flex justify-between items-center p-4 bg-background shadow-sm relative z-50">
-                <Link href="/" className="flex items-center justify-center  rounded-xl overflow-hidden">
-                    <Image
-                        src="/kalpi-logo.jpeg"
-                        alt="Kalpi Logo"
-                        width={80}
-                        height={80}
-                        className="h-12 w-auto object-contain"
-                    />
-                </Link>
+        <div className="fixed top-0 right-0 left-0 p-4 z-50">
+            <nav className="rounded-full outline-2 outline-primary/5 flex justify-between items-center px-2 py-2 bg-muted/50 backdrop-blur shadow-lg relative z-50">
+                <div>
+                    <Link href="/" className="bg-white h-10 w-16 relative flex items-center justify-center  rounded-4xl overflow-hidden">
+                        <Image
+                            src="/kalpi-logo.jpeg"
+                            alt="Kalpi Logo"
+                            width={100}
+                            height={100}
+                            className=" w-auto object-contain absolute bottom-0.5"
+                        />
+                    </Link>
+                </div>
 
                 {/* Desktop Navigation Links */}
                 <div className="hidden lg:flex mx-auto gap-8">
@@ -148,7 +150,7 @@ export default function Navbar() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        className="lg:hidden absolute top-full left-0 right-0 bg-background shadow-lg border-t z-40"
+                        className="lg:hidden rounded-b-4xl absolute top-12 pt-8 left-4 right-4 bg-background shadow-lg  outline-2 outline-primary/5 z-40"
                         initial="closed"
                         animate="open"
                         exit="closed"
@@ -174,12 +176,12 @@ export default function Navbar() {
                         </div>
 
                         {/* Rainbow Bar for Mobile */}
-                        <div className="flex h-1">
+                        <div className="flex h-0.5 px-6 z-50">
                             {["bg-red-400", "bg-orange-400", "bg-yellow-400", "bg-green-400", "bg-blue-400"].map(
                                 (color, index) => (
                                     <motion.div
                                         key={index}
-                                        className={cn(color, "h-1 flex-1 opacity-60")}
+                                        className={cn(color, "h-0.5 flex-1 opacity-60 rounded-full ")}
                                         variants={rainbowVariants}
                                         style={{ originX: 0 }}
                                         transition={{ delay: index * 0.1 }}
@@ -192,9 +194,9 @@ export default function Navbar() {
             </AnimatePresence>
 
             {/* Desktop Rainbow Bar */}
-            <div className="hidden lg:flex h-1">
+            <div className="rounded-full flex h-0.5 px-8 relative bottom-0.5 z-50">
                 {["bg-red-400", "bg-orange-400", "bg-yellow-400", "bg-green-400", "bg-blue-400"].map((color, index) => (
-                    <div key={index} className={cn(color, "h-1 flex-1 opacity-60")} />
+                    <div key={index} className={cn(color, "h-0.5 flex-1 opacity-60 rounded-full ")} />
                 ))}
             </div>
         </div>
