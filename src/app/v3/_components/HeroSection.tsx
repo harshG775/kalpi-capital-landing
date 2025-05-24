@@ -6,6 +6,25 @@ import Image from "next/image";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { Badge } from "@/components/ui/badge";
 import { Typewriter } from "../../../components/ui/Typewriter";
+import { cn } from "@/lib/utils";
+
+function FloatingElement({ children, ...props }: React.ComponentProps<typeof motion.div>) {
+    return (
+        <motion.div
+            animate={{
+                y: [-10, 10, -10],
+            }}
+            transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+            }}
+            {...props}
+        >
+            {children}
+        </motion.div>
+    );
+}
 
 export default function HeroSection() {
     return (
@@ -67,25 +86,43 @@ export default function HeroSection() {
                         </div>
 
                         {/* Floating elements */}
-                        <div className="absolute -top-6 -left-6 bg-primary/10 p-4 rounded-lg shadow-lg backdrop-blur-sm border border-primary/20">
+                        <FloatingElement className="absolute -top-6 -left-6 bg-primary/10 p-4 rounded-lg shadow-lg backdrop-blur-sm border border-primary/20">
                             <div className="flex items-center gap-2">
                                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                                     <Check className="h-4 w-4" />
                                 </div>
                                 <div className="text-sm font-medium">Strategy Optimized</div>
                             </div>
-                        </div>
+                        </FloatingElement>
 
-                        <div className="absolute -bottom-6 -right-6 bg-primary/10 p-4 rounded-lg shadow-lg backdrop-blur-sm border border-primary/20">
+                        <FloatingElement className="absolute -bottom-6 -right-6 bg-primary/10 p-4 rounded-lg shadow-lg backdrop-blur-sm border border-primary/20">
                             <div className="flex items-center gap-2">
                                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                                     <TrendingUp className="h-4 w-4" />
                                 </div>
                                 <div className="text-sm font-medium">+28% Performance</div>
                             </div>
-                        </div>
+                        </FloatingElement>
                         {/* gradient */}
-                        <div className="bg-gradient-to-br from-chart-2/20 to-primary/20 absolute -z-10 rounded-2xl blur-xl scale-200  w-[25rem] h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                        <div
+                            className={cn(
+                                "bg-gradient-to-br from-primary/20 to-primary/20 absolute -z-10 rounded-2xl blur-md scale-200 w-[25rem] h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                            )}
+                        />
+                        <div
+                            className={cn(
+                                "absolute -z-20 rounded-2xl scale-200 w-[20rem] h-[21rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                            )}
+                            style={{
+                                boxShadow: `
+                                  oklch(0.723 0.219 149.579 / 0.4) -5px 5px,
+                                  oklch(0.723 0.219 149.579 / 0.3) -10px 10px,
+                                  oklch(0.723 0.219 149.579 / 0.2) -15px 15px,
+                                  oklch(0.723 0.219 149.579 / 0.1) -20px 20px,
+                                  oklch(0.723 0.219 149.579 / 0.05) -25px 25px
+                                `,
+                            }}
+                        />
                     </motion.div>
                 </div>
 
