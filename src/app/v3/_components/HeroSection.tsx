@@ -169,7 +169,7 @@ function BrandMarquee() {
         },
     ];
     return (
-        <div className="flex overflow-hidden relative py-10 max-w-4xl mx-auto">
+        <div className="flex overflow-hidden relative py-10 max-w-4xl mx-auto mask-x-from-90%">
             <motion.div
                 animate={{
                     x: ["0%", "-100%"],
