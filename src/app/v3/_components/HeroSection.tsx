@@ -5,6 +5,7 @@ import { ArrowRight, Check, StarsIcon, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { Badge } from "@/components/ui/badge";
+import { Typewriter } from "../../../components/ui/Typewriter";
 
 export default function HeroSection() {
     return (
@@ -19,7 +20,7 @@ export default function HeroSection() {
                     >
                         <Badge variant="outline" className="border-primary rounded-full">
                             <StarsIcon className="h-10 w-10 text-primary inline-block" />
-                            Say Hello to Truva AI
+                            Say Hello to <Typewriter texts={["AI-Powered", "Data-Driven", "No-Code"]} />
                         </Badge>
                         <h1 className="text-4xl sm:text-7xl font-bold space-y-4 mb-4">
                             We Democratize
