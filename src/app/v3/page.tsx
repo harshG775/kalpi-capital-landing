@@ -14,7 +14,7 @@ export default function V3page() {
     return (
         <div>
             <Navbar />
-            <main>
+            <main className="overflow-hidden">
                 <HeroSection />
                 <Feature1Section />
                 <Feature2Section />

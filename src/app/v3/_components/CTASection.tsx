@@ -39,10 +39,9 @@ export default function CTASection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="relative"
                     >
-                        <div className="bg-primary-foreground rounded-t-xl overflow-hidden max-w-3xl mx-auto h-[480px]">
-                            <div className="h-8 bg-gray-100 flex items-center px-4">
+                        <div className="bg-muted p-1 rounded-t-xl overflow-hidden max-w-3xl mx-auto h-[480px]">
+                            <div className="h-8 bg-muted flex items-center px-4">
                                 <div className="flex gap-2">
                                     <div className="w-3 h-3 rounded-full bg-red-500" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-500" />
@@ -54,7 +53,7 @@ export default function CTASection() {
                                 alt="Kalpi Capital Platform"
                                 width={600}
                                 height={400}
-                                className="w-full object-cover"
+                                className="h-[480px] w-full object-cover"
                             />
                         </div>
                     </motion.div>
