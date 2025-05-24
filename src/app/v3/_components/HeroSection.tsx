@@ -20,7 +20,7 @@ export default function HeroSection() {
                     >
                         <Badge variant="outline" className="border-primary rounded-full">
                             <StarsIcon className="h-10 w-10 text-primary inline-block" />
-                            Say Hello to <Typewriter texts={["AI-Powered", "Data-Driven", "No-Code"]} />
+                            we empower <Typewriter texts={["AI-Powered", "Data-Driven", "No-Code"]} />
                         </Badge>
                         <h1 className="text-4xl sm:text-7xl font-bold space-y-4 mb-4">
                             We Democratize
@@ -94,21 +94,7 @@ export default function HeroSection() {
                     <p className="text-center text-sm text-muted-foreground font-semibold mb-6">
                         Built by experts from
                     </p>
-                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                        {["HDFC", "ICICI", "Axis", "Kotak", "SBI"].map((company, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0.5 }}
-                                whileInView={{ opacity: 1 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ once: true }}
-                            >
-                                <div className="font-serif text-2xl font-medium text-muted-foreground px-4 py-2">
-                                    {company}
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+                    <BrandMarquee />
                 </div>
                 <div>
                     <iframe
@@ -120,5 +106,95 @@ export default function HeroSection() {
                 </div>
             </div>
         </section>
+    );
+}
+
+function BrandMarquee() {
+    const images = [
+        {
+            src: "https://framerusercontent.com/images/d8aWQU3pV1OkH79dXhgZMFPdspk.svg",
+            alt: "",
+        },
+        {
+            src: "https://framerusercontent.com/images/lZLo6ENbuGE44c4bYtzSkNDM9ZU.png",
+            alt: "Freja",
+        },
+        {
+            src: "https://framerusercontent.com/images/xVzMD0TJ0Anqdg0kyzMqm1D60VQ.svg",
+            alt: "",
+        },
+        {
+            src: "https://framerusercontent.com/images/zSaxJPUdQcrhmMHx7b0ZlrNx4.png",
+            alt: "",
+        },
+        {
+            src: "https://framerusercontent.com/images/i3T3MQUv2ySYpKP4QHxzdLfIEPM.png",
+            alt: "",
+        },
+        {
+            src: "https://framerusercontent.com/images/cFJf5fMUK348H0qbvMHgWawn4N4.png",
+            alt: "",
+        },
+        {
+            src: "https://framerusercontent.com/images/Kt90z4GONzIEGDOmcTD9jelitEE.png",
+            alt: "",
+        },
+        {
+            src: "https://framerusercontent.com/images/2N6PuJxIx6rxwyC8kVMfXK6jU.png",
+            alt: "Freja",
+        },
+        {
+            src: "https://framerusercontent.com/images/p94Hsb2YZtNd98kPlLyYipM8pFg.png",
+            alt: "",
+        },
+        {
+            src: "https://framerusercontent.com/images/17WWoke6mdJCL0YihbLit0jDQFA.png",
+            alt: "Freja",
+        },
+        {
+            src: "https://framerusercontent.com/images/WoD4q9HFpUSD8sUpc1jhI4065Q.svg",
+            alt: "Freja",
+        },
+        {
+            src: "https://framerusercontent.com/images/kqWZb7I6kYBs2lGGXgnOWni4iQ.svg",
+            alt: "Freja",
+        },
+        {
+            src: "https://framerusercontent.com/images/xNUNVSTHwSBAgt9H7rXy3OC1nAw.svg",
+            alt: "Freja",
+        },
+        {
+            src: "https://framerusercontent.com/images/3dNDkHYn9BceXNdBBdnJiREERw.png",
+            alt: "Freja",
+        },
+    ];
+    return (
+        <div className="flex overflow-hidden relative py-10 max-w-4xl mx-auto">
+            <motion.div
+                animate={{
+                    x: ["0%", "-100%"],
+                }}
+                transition={{
+                    duration: 20,
+                    ease: "linear",
+                    repeat: Infinity,
+                }}
+                className="flex gap-8 items-center w-max"
+            >
+                {[...images, ...images].map((image, index) => (
+                    <img
+                        key={index}
+                        src={image.src}
+                        alt={image.alt}
+                        className="grayscale-100 hover:grayscale-0"
+                        style={{
+                            height: "40px",
+                            width: "auto",
+                            flexShrink: 0,
+                        }}
+                    />
+                ))}
+            </motion.div>
+        </div>
     );
 }
