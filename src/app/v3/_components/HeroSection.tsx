@@ -106,7 +106,7 @@ export default function HeroSection() {
                         {/* gradient */}
                         <div
                             className={cn(
-                                "bg-gradient-to-br from-primary/20 to-primary/20 absolute -z-10 rounded-2xl blur-md scale-200 w-[25rem] h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                                "bg-gradient-to-br from-primary/20 to-primary/20 absolute -z-10 rounded-2xl blur-md scale-200 h-[25rem] w-[25rem] top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                             )}
                         />
                         <div
