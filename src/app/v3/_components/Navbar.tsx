@@ -3,11 +3,12 @@ import { cn } from "@/lib/utils";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 
 export default function Navbar() {
+    const [isTop, setIsTop] = useState(true);
     const { theme, setTheme } = useTheme();
 
     const [isOpen, setIsOpen] = useState(false);
@@ -92,17 +93,30 @@ export default function Navbar() {
         },
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsTop(window.scrollY === 0);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
-        <div className="fixed top-0 right-0 left-0 p-4 z-50">
+        <div
+            className={`fixed top-0 right-0 left-0 p-4 z-50 ${
+                isTop ? "max-w-[96rem]" : "max-w-6xl"
+            } mx-auto transition-[max-width] duration-300`}
+        >
             <nav className="rounded-full outline-2 outline-primary/5 flex justify-between items-center px-2 py-2 bg-muted/50 backdrop-blur shadow-lg relative z-50">
                 <div>
-                    <Link href="/" className="bg-white h-10 w-16 relative flex items-center justify-center  rounded-4xl overflow-hidden">
+                    <Link href="/" className=" h-10 relative flex items-center justify-center">
                         <Image
-                            src="/kalpi-logo.jpeg"
+                            src="/logo/icon.jpeg"
                             alt="Kalpi Logo"
-                            width={100}
-                            height={100}
-                            className=" w-auto object-contain absolute bottom-0.5"
+                            width={140}
+                            height={120}
+                            className="h-14 object-contain relative -left-2 rounded-full p-1 bg-white"
                         />
                     </Link>
                 </div>
@@ -192,13 +206,6 @@ export default function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
-
-            {/* Desktop Rainbow Bar */}
-            <div className="rounded-full flex h-0.5 px-8 relative bottom-0.5 z-50">
-                {["bg-red-400", "bg-orange-400", "bg-yellow-400", "bg-green-400", "bg-blue-400"].map((color, index) => (
-                    <div key={index} className={cn(color, "h-0.5 flex-1 opacity-60 rounded-full ")} />
-                ))}
-            </div>
         </div>
     );
 }
