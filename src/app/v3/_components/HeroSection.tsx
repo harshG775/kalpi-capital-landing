@@ -133,14 +133,14 @@ export default function HeroSection() {
                     </p>
                     <BrandMarquee />
                 </div>
-                <div>
+                {/* <div>
                     <iframe
                         src="https://player.vimeo.com/video/1069361225?muted=1autopause=0loop=1app_id=122963"
                         width="100%"
                         height="100%"
                         className="max-w-5xl mx-auto aspect-video rounded-2xl mt-20"
                     ></iframe>
-                </div>
+                </div> */}
             </div>
         </section>
     );

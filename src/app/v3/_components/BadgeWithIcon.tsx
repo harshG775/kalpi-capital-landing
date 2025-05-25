@@ -26,9 +26,9 @@ export const BadgeWithIcon = ({
     const colorClass = iconColor ? colorClasses[iconColor] : colorClasses.primary;
 
     return (
-        <div className={`flex flex-wrap gap-4 ${className}`}>
+        <div className={`flex flex-col md:flex-row gap-6 md:gap-8 ${className}`}>
             {texts?.map((text, index) => (
-                <div key={index} className="flex items-center gap-2 text-muted-foreground font-medium">
+                <div key={index} className="flex items-center gap-2 text-secondary-foreground/80 font-lexend">
                     <CheckIcon className={cn("size-6 p-1 rounded-full", colorClass)} />
                     <span>{text}</span>
                 </div>
