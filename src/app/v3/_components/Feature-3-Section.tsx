@@ -37,16 +37,24 @@ export default function Feature3Section() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="relative rounded-2xl overflow-hidden"
+                        className="relative rounded-xl overflow-hidden"
                     >
                         {/* <IntroductoryMeeting /> */}
-                        <div className="bg-primary w-full h-[12%] absolute top-0 left-0"></div>
+                        {/* <div className="bg-primary w-full h-[12%] absolute top-0 left-0 flex items-center" /> */}
+                        <div className="bg-secondary flex items-center px-4 absolute top-0 left-0 h-[12%] w-full">
+                            <div className="flex gap-2">
+                                <div className="w-3 h-3 rounded-full bg-red-500" />
+                                <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                                <div className="w-3 h-3 rounded-full bg-green-500" />
+                            </div>
+                        </div>
+
                         <video
-                            playsInline
-                            preload="auto"
-                            autoPlay
-                            loop
-                            aria-label="Dashboard Final"
+                            autoPlay={true}
+                            loop={true}
+                            muted={true}
+                            playsInline={true}
+                            controlsList="nodownload"
                             className="w-full h-full object-cover object-center"
                         >
                             <source src="https://sendbird.imgix.net/cms/Dashboard_Final.mp4" type="video/mp4" />
