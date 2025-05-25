@@ -65,19 +65,14 @@ function MadeOmniscient() {
             <div className="relative w-[500px] h-[500px] mx-auto">
                 <motion.div
                     className="absolute inset-0 flex items-center justify-center z-10"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
+                    initial={{ scale: 0.4 }}
+                    whileInView={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
-                    <div className="relative h-32 w-32 rounded-full bg-white shadow-xl border-8 border-primary/80 flex items-center justify-center overflow-hidden">
-                        <Image
-                            src="/kalpi-logo.jpeg"
-                            alt="Company Logo"
-                            width={80}
-                            height={80}
-                            className="object-contain scale-120"
-                        />
+                    <div className="relative h-48 w-48 rounded-full flex items-center justify-center overflow-hidden   ">
+                        <Image src="/logo/center.jpeg" alt="Company Logo" fill className="object-contain" />
                     </div>
+                    <div className="-z-10 absolute rounded-full inset-40 flex items-center justify-center bg-primary/40 blur-3xl" />
                 </motion.div>
 
                 {elements.map((item, index) => {
@@ -86,6 +81,7 @@ function MadeOmniscient() {
                     const angle = (index * (360 / total) - 90) * (Math.PI / 180);
                     const x = Math.cos(angle) * radius;
                     const y = Math.sin(angle) * radius;
+
 
                     return (
                         <div
@@ -107,10 +103,10 @@ function MadeOmniscient() {
                                     ease: "easeInOut",
                                     delay: index * 0.15,
                                 }}
-                                className="transition-all duration-300 px-2 py-1 rounded shadow-md flex items-center gap-2 hover:scale-110"
+                                className="transition-all duration-300 px-2 py-0.5 rounded-full shadow-md flex items-center gap-2 hover:scale-110"
                             >
                                 <div>{item.name}</div>
-                                <div className={`${item.color} px-2 py-1 rounded shadow-md`}>{item.subname}</div>
+                                <div className={`${item.color} px-2 py-0.5 rounded-full shadow-md`}>{item.subname}</div>
                             </motion.div>
                         </div>
                     );
