@@ -68,8 +68,19 @@ export default function HeroSection() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="relative"
                     >
-                        <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-xl overflow-hidden border border-gray-200 dark:border-neutral-700">
-                            <div className="h-8 bg-gray-100 dark:bg-neutral-700 flex items-center px-4">
+                        <div
+                            className="bg-background rounded-xl shadow-xl overflow-hidden border border-secondary"
+                            style={{
+                                boxShadow: `
+                                      oklch(0.723 0.219 149.579 / 0.1) -5px 5px,
+                                      oklch(0.723 0.219 149.579 / 0.08) -10px 10px,
+                                      oklch(0.723 0.219 149.579 / 0.06) -15px 15px,
+                                      oklch(0.723 0.219 149.579 / 0.04) -20px 20px,
+                                      oklch(0.723 0.219 149.579 / 0.02) -25px 25px
+                                    `,
+                            }}
+                        >
+                            <div className="h-8 bg-secondary flex items-center px-4">
                                 <div className="flex gap-2">
                                     <div className="w-3 h-3 rounded-full bg-red-500" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-500" />
@@ -86,7 +97,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Floating elements */}
-                        <FloatingElement className="absolute -top-6 -left-6 bg-primary/10 p-4 rounded-lg shadow-lg backdrop-blur-sm border border-primary/20">
+                        <FloatingElement className="absolute top-20 -left-10 bg-primary/10 p-4 rounded-lg shadow-lg backdrop-blur-sm border border-primary/20">
                             <div className="flex items-center gap-2">
                                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                                     <Check className="h-4 w-4" />
@@ -106,22 +117,8 @@ export default function HeroSection() {
                         {/* gradient */}
                         <div
                             className={cn(
-                                "bg-gradient-to-br from-primary/20 to-primary/20 absolute -z-10 rounded-2xl blur-md scale-200 h-[25rem] w-[25rem] top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                                "bg-gradient-to-b from-primary/30 to-primary/0 absolute -z-10 rounded-2xl blur-xl scale-200 h-[25rem] aspect-square top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                             )}
-                        />
-                        <div
-                            className={cn(
-                                "absolute -z-20 rounded-2xl scale-200 w-[20rem] h-[21rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                            )}
-                            style={{
-                                boxShadow: `
-                                  oklch(0.723 0.219 149.579 / 0.4) -5px 5px,
-                                  oklch(0.723 0.219 149.579 / 0.3) -10px 10px,
-                                  oklch(0.723 0.219 149.579 / 0.2) -15px 15px,
-                                  oklch(0.723 0.219 149.579 / 0.1) -20px 20px,
-                                  oklch(0.723 0.219 149.579 / 0.05) -25px 25px
-                                `,
-                            }}
                         />
                     </motion.div>
                 </div>
