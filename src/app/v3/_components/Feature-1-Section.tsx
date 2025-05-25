@@ -14,76 +14,23 @@ export default function Feature1Section() {
                         viewport={{ once: true }}
                     >
                         <Badge variant="outline" className="mb-6 outline-1 outline-pink-500 rounded-full">
-                            Sales Insights
+                            Automated Backtesting
                         </Badge>
                         <h2 className="font-lexend text-4xl md:text-5xl font-medium mb-6">
-                            Your Sales <span className="text-primary">Memory, Perfected</span>
+                            No-Code <span className="text-primary">Strategy Builder</span> with one click Backtest{" "}
                         </h2>
-                        <p className="text-lg text-muted-foreground font-medium mb-8">
-                            Kalpi Capital remembers every detail of your quant strategies, so you can focus on creating
-                            new ones. Our AI-powered platform tracks all your backtests, optimizations, and performance
-                            metrics.
+                        <p className="max-w-xl mt-8 text-lg text-muted-foreground font-medium mb-8">
+                            Lets you to design and implement systematic trading strategies with an intuitive drag and
+                            drop interface. You don't need programming skills to harness the power of quant investing
+                            Our platform includes a powerful backtesting framework that allows you to evaluate the
+                            historical performance of your strategies with a single click. Test your ideas rigorously
+                            before deploying them in the real world
                         </p>
                         <BadgeWithIcon
-                            texts={["Auto-Attend", "Smart Extraction", "Customizable"]}
+                            texts={["Automated Backtesting", "No-Code Strategy Builder", "One-Click Backtest"]}
                             className="mt-8"
                             iconColor="pink"
                         />
-                        {/* Summary Stats */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 2, duration: 0.6 }}
-                            className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 mt-8 border-gray-200"
-                        >
-                            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center">
-                                <motion.div
-                                    className="text-3xl font-bold text-blue-600"
-                                    initial={{ scale: 0 }}
-                                    animate={{ scale: 1 }}
-                                    transition={{ delay: 2.2, duration: 0.4, type: "spring" }}
-                                >
-                                    1,011
-                                </motion.div>
-                                <div className="text-sm text-blue-700 font-medium">Total Backtests</div>
-                            </div>
-
-                            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center">
-                                <motion.div
-                                    className="text-3xl font-bold text-green-600"
-                                    initial={{ scale: 0 }}
-                                    animate={{ scale: 1 }}
-                                    transition={{ delay: 2.4, duration: 0.4, type: "spring" }}
-                                >
-                                    87%
-                                </motion.div>
-                                <div className="text-sm text-green-700 font-medium">Avg Performance</div>
-                            </div>
-
-                            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center">
-                                <motion.div
-                                    className="text-3xl font-bold text-purple-600"
-                                    initial={{ scale: 0 }}
-                                    animate={{ scale: 1 }}
-                                    transition={{ delay: 2.6, duration: 0.4, type: "spring" }}
-                                >
-                                    2.5
-                                </motion.div>
-                                <div className="text-sm text-purple-700 font-medium">Avg Sharpe Ratio</div>
-                            </div>
-
-                            <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-6 text-center">
-                                <motion.div
-                                    className="text-3xl font-bold text-amber-600 mb-2"
-                                    initial={{ scale: 0 }}
-                                    animate={{ scale: 1 }}
-                                    transition={{ delay: 2.8, duration: 0.4, type: "spring" }}
-                                >
-                                    24/7
-                                </motion.div>
-                                <div className="text-sm text-amber-700 font-medium">Auto-Tracking</div>
-                            </div>
-                        </motion.div>
                     </motion.div>
 
                     <motion.div
@@ -93,7 +40,17 @@ export default function Feature1Section() {
                         viewport={{ once: true }}
                         className="relative"
                     >
-                        <SalesInsightsChart />
+                        <div className="md:mt-24 shadow-lg border border-border flex flex-col relative w-full aspect-video rounded-2xl overflow-hidden md:scale-110">
+                            <video
+                                className=" relative bottom-[10%]"
+                                src="https://www.lyzr.ai/wp-content/uploads/2025/01/Screen-Recording-2025-01-08-at-8.39.57 PM-online-video-cutter.com-1.mp4#t=1"
+                                autoPlay={true}
+                                loop={true}
+                                muted={true}
+                                playsInline={true}
+                                controlsList="nodownload"
+                            />
+                        </div>
                     </motion.div>
                 </div>
             </div>
@@ -217,11 +174,7 @@ const SalesInsightsChart = () => {
                     const widthPercentage = (item.performance / maxPerformance) * 100;
 
                     return (
-                        <motion.div
-                            key={item.strategy}
-                            variants={barVariants}
-                            className="relative group"
-                        >
+                        <motion.div key={item.strategy} variants={barVariants} className="relative group">
                             {/* Strategy Label */}
                             <div className="flex justify-between items-center">
                                 <h4 className="text-base font-semibold text-muted-foreground">{item.strategy}</h4>

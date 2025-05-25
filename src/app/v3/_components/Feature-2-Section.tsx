@@ -29,14 +29,14 @@ export default function Feature2Section() {
                             Automated CRM Updates
                         </Badge>
                         <h2 className="font-lexend text-4xl md:text-5xl font-medium mb-6">
-                            Your CRM, <span className="text-primary">Made Omniscient</span>
+                            AI/ML Portfolio <span className="text-primary">Combiner & Optimizer</span>
                         </h2>
-                        <p className="text-lg text-muted-foreground font-medium mb-8">
-                            Our platform combines powerful technology with an intuitive interface to help you succeed in
-                            systematic portfolio construction.
+                        <p className="max-w-xl mt-8 text-lg text-muted-foreground font-medium mb-8">
+                            we use advanced machine learning to combine multiple factors and alphas, creating optimized
+                            portfolios designed tor maximum efficiency and scalability.
                         </p>
                         <BadgeWithIcon
-                            texts={["Intelligent Mapping", "User-Configurable Rules"]}
+                            texts={["Enhanced Reterns", "Multifactor Model", "Regime-Modeling"]}
                             className="mt-8"
                             iconColor="red"
                         />
@@ -81,7 +81,6 @@ function MadeOmniscient() {
                     const angle = (index * (360 / total) - 90) * (Math.PI / 180);
                     const x = Math.cos(angle) * radius;
                     const y = Math.sin(angle) * radius;
-
 
                     return (
                         <div

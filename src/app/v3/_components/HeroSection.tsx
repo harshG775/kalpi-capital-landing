@@ -49,7 +49,7 @@ export default function HeroSection() {
                             />
                             Investing
                         </h1>
-                        <p className="mt-8 text-lg text-muted-foreground font-medium mb-8">
+                        <p className="max-w-xl mt-8 text-lg text-muted-foreground font-medium mb-8">
                             Create, backtest and deploy Quant AI/ML portfolios without writing code. Harness the power
                             of data-driven decisions.
                         </p>
@@ -145,17 +145,7 @@ export default function HeroSection() {
                     viewport={{ once: true }}
                     className="py-20"
                 >
-                    <div className="shadow-lg border border-border flex flex-col relative max-w-5xl mx-auto aspect-video rounded-2xl overflow-hidden">
-                        <video
-                            className=" relative bottom-[10%]"
-                            src="https://www.lyzr.ai/wp-content/uploads/2025/01/Screen-Recording-2025-01-08-at-8.39.57 PM-online-video-cutter.com-1.mp4#t=1"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            controlsList="nodownload"
-                        />
-                    </div>
+                    
                 </motion.div>
             </div>
         </section>

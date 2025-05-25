@@ -21,7 +21,7 @@ export default function FeatureHubSection() {
                     <h2 className="font-lexend text-4xl md:text-5xl font-medium mb-6">
                         Your Modern <span className="text-primary">Sales Intelligence Hub</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground font-medium mb-8">
+                    <p className="max-w-xl mt-8 text-lg text-muted-foreground font-medium mb-8">
                         Kalpi brings together all the tools you need to build, test, and deploy quantitative investment
                         strategies in one place.
                     </p>

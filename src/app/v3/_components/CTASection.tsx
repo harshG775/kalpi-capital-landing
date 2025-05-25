@@ -18,7 +18,8 @@ export default function CTASection() {
                         <h2 className="text-4xl md:text-6xl font-bold mb-6 text-center">
                             Unlock Your Sales Team&apos;s Full Potential
                         </h2>
-                        <p className="text-xl text-primary-foreground/90 text-center">
+                        <p className="max-w-xl mx-auto mt-8 text-xl text-center text-primary-foreground/90 font-medium mb-8">
+
                             Streamline operations and drive results with our cutting-edge quant investing platform.
                         </p>
                         <div className="flex justify-center w-full py-8 max-w-2xl mx-auto">

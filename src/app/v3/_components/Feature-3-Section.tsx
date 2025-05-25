@@ -18,14 +18,15 @@ export default function Feature3Section() {
                             Sales Activity Analytics
                         </Badge>
                         <h2 className="font-lexend text-4xl md:text-5xl font-medium mb-6">
-                            Smart Follow-Ups, <span className="text-primary">Always on Time</span>
+                            LLM-Powered Stock <span className="text-primary">Research & Portfolio Insights</span>
                         </h2>
-                        <p className="text-lg text-muted-foreground font-medium mb-8">
-                            It&apos;s easy to set up automated follow-ups when you have Kalpi&apos;s AI on your side.
-                            Our system learns from successful strategies to suggest optimal rebalancing times.
+                        <p className="max-w-xl mt-8 text-lg text-muted-foreground font-medium mb-8">
+                            Kalpi Capital integrates cutting-edge Large Language Models (LLMs) to provide you with
+                            advanced stock research and portfolio insights. Get summaries, identify key factors, and
+                            analyze information faster than ever before.
                         </p>
                         <BadgeWithIcon
-                            texts={["Automatic Task Detection", "Draft Email Follow-Ups"]}
+                            texts={["Summaries", "Key Factors", "Portfolio Insights"]}
                             className="mt-8"
                             iconColor="green"
                         />
@@ -36,9 +37,20 @@ export default function Feature3Section() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="relative"
+                        className="relative rounded-2xl overflow-hidden"
                     >
-                        <IntroductoryMeeting />
+                        {/* <IntroductoryMeeting /> */}
+                        <div className="bg-primary w-full h-[12%] absolute top-0 left-0"></div>
+                        <video
+                            playsInline
+                            preload="auto"
+                            autoPlay
+                            loop
+                            aria-label="Dashboard Final"
+                            className="w-full h-full object-cover object-center"
+                        >
+                            <source src="https://sendbird.imgix.net/cms/Dashboard_Final.mp4" type="video/mp4" />
+                        </video>
                     </motion.div>
                 </div>
             </div>
