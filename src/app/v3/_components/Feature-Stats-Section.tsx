@@ -50,7 +50,7 @@ export default function FeatureStatsSection() {
                         <Badge variant="outline" className="mb-6 outline-1 outline-blue-500 rounded-full">
                             Sales Activity Analytics
                         </Badge>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                        <h2 className="font-lexend text-4xl md:text-5xl font-medium mb-6">
                             Your Pitch, <span className="text-primary">By the Numbers</span>
                         </h2>
                         <p className="text-lg text-muted-foreground font-medium mb-8">

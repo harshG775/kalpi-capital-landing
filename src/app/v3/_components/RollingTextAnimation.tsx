@@ -15,7 +15,7 @@ export const RollingTextAnimation = ({ phrases, className }: { phrases: string[]
     }, [phrases.length]);
 
     return (
-        <div className={cn("text-4xl h-14 sm:text-7xl sm:h-18 flex overflow-hidden relative", className)}>
+        <div className={cn("text-4xl h-14 sm:text-5xl sm:h-18 flex overflow-hidden relative", className)}>
             <AnimatePresence mode="sync">
                 <motion.div
                     key={`${index}${phrases[index]}`}

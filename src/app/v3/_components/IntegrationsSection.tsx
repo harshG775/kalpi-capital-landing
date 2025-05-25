@@ -18,7 +18,7 @@ export default function IntegrationsSection() {
                     <Badge variant="outline" className="mb-6 h-6 hover:bg-background border-primary rounded-full">
                         Effortless Integrations
                     </Badge>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    <h2 className="font-lexend text-4xl md:text-5xl font-medium mb-6">
                         We make your <span className="text-primary">sales stack</span> work harder & smarter
                     </h2>
                     <p className="text-lg text-muted-foreground font-medium mb-8">

@@ -390,7 +390,7 @@ export default function HomePage() {
                                 viewport={{ once: true }}
                                 className="mb-16 max-w-3xl"
                             >
-                                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                                <h2 className="font-lexend text-4xl md:text-5xl font-medium mb-6">
                                     Powerful <span className="text-primary">Features</span>
                                 </h2>
                                 <p className="text-xl text-muted-foreground">
@@ -466,7 +466,7 @@ export default function HomePage() {
                                 viewport={{ once: true }}
                                 className="mt-32 text-center max-w-3xl mx-auto"
                             >
-                                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                                <h2 className="font-lexend text-4xl md:text-5xl font-medium mb-6">
                                     India&apos;s First <span className="text-primary">Systematic Quantitative</span>{" "}
                                     Research Platform
                                 </h2>

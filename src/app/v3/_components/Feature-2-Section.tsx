@@ -28,7 +28,7 @@ export default function Feature2Section() {
                         <Badge variant="outline" className="mb-6 outline-1 outline-red-500 rounded-full">
                             Automated CRM Updates
                         </Badge>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                        <h2 className="font-lexend text-4xl md:text-5xl font-medium mb-6">
                             Your CRM, <span className="text-primary">Made Omniscient</span>
                         </h2>
                         <p className="text-lg text-muted-foreground font-medium mb-8">

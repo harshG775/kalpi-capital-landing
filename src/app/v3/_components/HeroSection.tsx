@@ -35,13 +35,13 @@ export default function HeroSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="space-y-10 px-8"
+                        className="space-y-10 sm:px-8"
                     >
                         <Badge variant="outline" className="border-primary rounded-full">
                             <StarsIcon className="h-10 w-10 text-primary inline-block" />
                             we empower <Typewriter texts={["AI-Powered", "Data-Driven", "No-Code"]} />
                         </Badge>
-                        <h1 className="text-4xl sm:text-7xl font-bold space-y-4 mb-4">
+                        <h1 className="text-4xl sm:text-5xl font-bold space-y-4 mb-4">
                             We Democratize
                             <RollingTextAnimation
                                 phrases={["Quant Systematic", "AI-Powered", "Data-Driven", "No-Code"]}
@@ -53,7 +53,7 @@ export default function HeroSection() {
                             Create, backtest and deploy Quant AI/ML portfolios without writing code. Harness the power
                             of data-driven decisions.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-row gap-4">
                             <Button asChild className="h-14 rounded-4xl px-16 has-[>svg]:px-6">
                                 <MagneticButton>
                                     Start Today for Free <ArrowRight className="ml-2 h-4 w-4" />

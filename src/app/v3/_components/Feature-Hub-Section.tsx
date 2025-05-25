@@ -17,7 +17,7 @@ export default function FeatureHubSection() {
                     <Badge variant="outline" className="mb-6 outline-1 bg-red-500 text-white outline-red-500 rounded-full">
                         AI-Enabled Sales
                     </Badge>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    <h2 className="font-lexend text-4xl md:text-5xl font-medium mb-6">
                         Your Modern <span className="text-primary">Sales Intelligence Hub</span>
                     </h2>
                     <p className="text-lg text-muted-foreground font-medium mb-8">

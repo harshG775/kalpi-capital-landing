@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
+import {Inter, Lexend } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const lexend = Lexend({
     variable: "--font-lexend",
+    subsets: ["latin"],
+});
+
+const inter = Inter({
+    variable: "--font-inter",
     subsets: ["latin"],
 });
 
@@ -21,7 +26,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={`${lexend.variable} antialiased`}>
+            <body className={`${lexend.variable} ${inter.variable} font-inter antialiased`}>
                 <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
                     {children}
                 </ThemeProvider>
