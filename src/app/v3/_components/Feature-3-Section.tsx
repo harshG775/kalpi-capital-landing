@@ -45,50 +45,56 @@ export default function Feature3Section() {
         </section>
     );
 }
-
 function IntroductoryMeeting() {
     return (
         <div>
-            <div className="flex items-center gap-2 bg-background p-4 rounded-full shadow-xl">
+            <div className="flex items-center gap-2 bg-background px-4 py-2 rounded-full shadow-xl">
                 <div>
-                    <CalendarDaysIcon className="size-12 bg-blue-900 text-blue-100 rounded-full p-3" />
+                    <CalendarDaysIcon className="size-12 bg-primary text-primary-foreground rounded-full p-3" />
                 </div>
-                <div className="font-semibold text-xl text-gray-900">Introductory Meeting</div>
+                <div className="font-semibold text-xl text-foreground">Introductory Meeting</div>
                 <div className="ml-auto">
-                    <Badge className="bg-blue-400/10 text-gray-950 rounded-full">Nov 13</Badge>
+                    <Badge className="bg-primary/10 text-foreground rounded-full">Nov 13</Badge>
                 </div>
             </div>
             <div className="pl-16">
-                <div className="flex items-center gap-2 bg-blue-200/80 p-2 rounded-full mt-4">
-                    <Cloud className="size-10 bg-white text-blue-950 rounded-full p-3" />
-                    <div className="font-medium text-gray-900">Cloud Storage</div>
-                    <div className="ml-auto">
-                        <div className="rounded-full bg-rose-400 text-rose-50 px-3 py-1 size-10 flex justify-center items-center font-semibold">
-                            JR
+                {[
+                    { text: "Cloud Storage", prefix: "JR", color: "bg-blue-400 text-blue-50" },
+                    { text: "Send Pricing Options", prefix: "AD", color: "bg-red-400 text-red-50" },
+                    { text: "Schedule Next Meeting", prefix: "JR", color: "bg-yellow-400 text-yellow-50" },
+                ].map((item, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="flex items-center gap-2 bg-gradient-to-r from-primary/40 to-primary/20 p-1.5 rounded-full mt-2"
+                    >
+                        <Cloud className="size-8 bg-background text-primary rounded-full p-2" />
+                        <div className="font-medium text-foreground">{item.text}</div>
+                        <div className="ml-auto">
+                            <div
+                                className={`rounded-full ${item.color} px-3 py-1 size-8 flex justify-center items-center font-semibold`}
+                            >
+                                {item.prefix}
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div className="flex items-center gap-2 bg-blue-200/80 p-2 rounded-full mt-4">
-                    <Cloud className="size-10 bg-white text-blue-950 rounded-full p-3" />
-                    <div className="font-medium text-gray-900">Send Pricing Options</div>
-                    <div className="ml-auto">
-                        <div className="rounded-full bg-rose-400 text-rose-50 px-3 py-1 size-10 flex justify-center items-center font-semibold">
-                            AD
-                        </div>
-                    </div>
-                </div>
-                <div className="flex items-center gap-2 bg-blue-200/80 p-2 rounded-full mt-4">
-                    <Cloud className="size-10 bg-white text-blue-950 rounded-full p-3" />
-                    <div className="font-medium text-gray-900">Schedule Next Meeting</div>
-                    <div className="ml-auto">
-                        <div className="rounded-full bg-rose-400 text-rose-50 px-3 py-1 size-10 flex justify-center items-center font-semibold">
-                            JR
-                        </div>
-                    </div>
-                </div>
+                    </motion.div>
+                ))}
             </div>
-            <div className="flex items-start gap-4 p-4 mt-4">
-                <div className=" rounded-full size-12 overflow-hidden ">
+            <motion.div
+                animate={{
+                    y: [-10, 10, -10],
+                }}
+                transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="flex items-start gap-4 p-4 mt-4"
+            >
+                <div className="rounded-full size-12 overflow-hidden">
                     <img
                         src="https://framerusercontent.com/images/t3tANQCYnree6SiGycrQvOcOI.png"
                         alt="feature-3"
@@ -96,10 +102,10 @@ function IntroductoryMeeting() {
                     />
                 </div>
                 <div>
-                    <div className="font-semibold">Khari Devin</div>
-                    <div className="text-xs">CTO</div>
+                    <div className="font-semibold text-foreground">Khari Devin</div>
+                    <div className="text-xs text-muted-foreground">CTO</div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }
