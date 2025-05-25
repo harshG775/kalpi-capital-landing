@@ -138,6 +138,25 @@ export default function HeroSection() {
                         className="max-w-5xl mx-auto aspect-video rounded-2xl mt-20"
                     ></iframe>
                 </div> */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="py-20"
+                >
+                    <div className="shadow-lg border border-border flex flex-col relative max-w-5xl mx-auto aspect-video rounded-2xl overflow-hidden">
+                        <video
+                            className=" relative bottom-[10%]"
+                            src="https://www.lyzr.ai/wp-content/uploads/2025/01/Screen-Recording-2025-01-08-at-8.39.57 PM-online-video-cutter.com-1.mp4#t=1"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            controlsList="nodownload"
+                        />
+                    </div>
+                </motion.div>
             </div>
         </section>
     );
