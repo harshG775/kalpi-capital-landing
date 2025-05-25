@@ -60,7 +60,7 @@ export default function Feature1Section() {
 
 import React, { useState, useEffect } from "react";
 
-const SalesInsightsChart = () => {
+export const SalesInsightsChart = () => {
     const [animationKey, setAnimationKey] = useState(0);
 
     // Sample data representing quant strategy performance metrics
