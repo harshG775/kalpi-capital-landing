@@ -30,18 +30,18 @@ export default function HeroSection() {
     return (
         <section className="pt-28 md:pt-32 py-12 md:py-18 lg:px-0 px-4 overflow-hidden">
             <div className="max-w-[96rem] mx-auto ">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-top">
+                <div className="grid grid-cols-1 lg:grid-cols-[4fr_3fr] lg:gap-0 gap-12 items-top">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="space-y-10 sm:px-8"
+                        className="px-8 lg:px-2"
                     >
-                        <Badge variant="outline" className="border-primary rounded-full">
+                        <Badge variant="outline" className="mt-12 border-primary rounded-full">
                             <StarsIcon className="h-10 w-10 text-primary inline-block" />
                             we empower <Typewriter texts={["AI-Powered", "Data-Driven", "No-Code"]} />
                         </Badge>
-                        <h1 className="text-4xl sm:text-5xl font-bold space-y-4 mb-4">
+                        <h1 className="mt-12 text-4xl sm:text-6xl font-bold space-y-4 mb-4">
                             We Democratize
                             <RollingTextAnimation
                                 phrases={["Quant Systematic", "AI-Powered", "Data-Driven", "No-Code"]}
@@ -49,11 +49,11 @@ export default function HeroSection() {
                             />
                             Investing
                         </h1>
-                        <p className="text-lg text-muted-foreground font-medium mb-8">
+                        <p className="mt-8 text-lg text-muted-foreground font-medium mb-8">
                             Create, backtest and deploy Quant AI/ML portfolios without writing code. Harness the power
                             of data-driven decisions.
                         </p>
-                        <div className="flex flex-row gap-4">
+                        <div className="mt-12 flex flex-row gap-4">
                             <Button asChild className="h-14 rounded-4xl px-16 has-[>svg]:px-6">
                                 <MagneticButton>
                                     Start Today for Free <ArrowRight className="ml-2 h-4 w-4" />
@@ -66,7 +66,7 @@ export default function HeroSection() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="relative"
+                        className="relative lg:pl-2"
                     >
                         <div
                             className="bg-background rounded-xl shadow-xl overflow-hidden border border-secondary"
@@ -117,7 +117,7 @@ export default function HeroSection() {
                         {/* gradient */}
                         <div
                             className={cn(
-                                "bg-gradient-to-b from-primary/30 to-primary/0 absolute -z-10 rounded-2xl blur-xl scale-200 h-[25rem] aspect-square top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                                "bg-gradient-to-b from-primary/40 to-primary/0 absolute -z-10 rounded-2xl blur-xl scale-200 h-[38rem] w-[28rem] aspect-square top-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                             )}
                         />
                     </motion.div>
