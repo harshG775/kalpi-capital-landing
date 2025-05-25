@@ -104,7 +104,6 @@ export default function Feature1Section() {
 import React, { useState, useEffect } from "react";
 
 const SalesInsightsChart = () => {
-    const [activeBar, setActiveBar] = useState<number | null>(null);
     const [animationKey, setAnimationKey] = useState(0);
 
     // Sample data representing quant strategy performance metrics
@@ -222,8 +221,6 @@ const SalesInsightsChart = () => {
                             key={item.strategy}
                             variants={barVariants}
                             className="relative group"
-                            onMouseEnter={() => setActiveBar(index)}
-                            onMouseLeave={() => setActiveBar(null)}
                         >
                             {/* Strategy Label */}
                             <div className="flex justify-between items-center">
