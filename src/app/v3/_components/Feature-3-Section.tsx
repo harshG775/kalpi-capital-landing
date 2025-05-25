@@ -57,7 +57,7 @@ export default function Feature3Section() {
         </section>
     );
 }
-function IntroductoryMeeting() {
+export function IntroductoryMeeting() {
     return (
         <div>
             <div className="flex items-center gap-2 bg-background px-4 py-2 rounded-full shadow-xl">

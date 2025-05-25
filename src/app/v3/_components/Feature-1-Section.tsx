@@ -21,7 +21,7 @@ export default function Feature1Section() {
                         </h2>
                         <p className="max-w-xl mt-8 text-lg text-muted-foreground font-medium mb-8">
                             Lets you to design and implement systematic trading strategies with an intuitive drag and
-                            drop interface. You don't need programming skills to harness the power of quant investing
+                            drop interface. You don&apos;t need programming skills to harness the power of quant investing
                             Our platform includes a powerful backtesting framework that allows you to evaluate the
                             historical performance of your strategies with a single click. Test your ideas rigorously
                             before deploying them in the real world
